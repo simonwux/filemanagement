@@ -1,0 +1,9 @@
+F:\项目\filemanagement\filemanagement\bin\Debug\filemanagement.exe.config
+F:\项目\filemanagement\filemanagement\obj\Debug\filemanagement.csprojResolveAssemblyReference.cache
+F:\项目\filemanagement\filemanagement\obj\Debug\filemanagement.Form1.resources
+F:\项目\filemanagement\filemanagement\obj\Debug\filemanagement.Properties.Resources.resources
+F:\项目\filemanagement\filemanagement\obj\Debug\filemanagement.csproj.GenerateResource.Cache
+F:\项目\filemanagement\filemanagement\bin\Debug\filemanagement.exe
+F:\项目\filemanagement\filemanagement\bin\Debug\filemanagement.pdb
+F:\项目\filemanagement\filemanagement\obj\Debug\filemanagement.exe
+F:\项目\filemanagement\filemanagement\obj\Debug\filemanagement.pdb
