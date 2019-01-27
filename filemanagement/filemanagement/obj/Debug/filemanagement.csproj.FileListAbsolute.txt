@@ -7,3 +7,13 @@ F:\项目\filemanagement\filemanagement\bin\Debug\filemanagement.exe
 F:\项目\filemanagement\filemanagement\bin\Debug\filemanagement.pdb
 F:\项目\filemanagement\filemanagement\obj\Debug\filemanagement.exe
 F:\项目\filemanagement\filemanagement\obj\Debug\filemanagement.pdb
+D:\study\Simon study\大二下\操作系统项目\文件管理_1452675_吴硕旻\filemanagement\filemanagement\bin\Debug\filemanagement.exe.config
+D:\study\Simon study\大二下\操作系统项目\文件管理_1452675_吴硕旻\filemanagement\filemanagement\bin\Debug\filemanagement.exe
+D:\study\Simon study\大二下\操作系统项目\文件管理_1452675_吴硕旻\filemanagement\filemanagement\bin\Debug\filemanagement.pdb
+D:\study\Simon study\大二下\操作系统项目\文件管理_1452675_吴硕旻\filemanagement\filemanagement\obj\Debug\filemanagement.csprojAssemblyReference.cache
+D:\study\Simon study\大二下\操作系统项目\文件管理_1452675_吴硕旻\filemanagement\filemanagement\obj\Debug\filemanagement.Form1.resources
+D:\study\Simon study\大二下\操作系统项目\文件管理_1452675_吴硕旻\filemanagement\filemanagement\obj\Debug\filemanagement.Properties.Resources.resources
+D:\study\Simon study\大二下\操作系统项目\文件管理_1452675_吴硕旻\filemanagement\filemanagement\obj\Debug\filemanagement.csproj.GenerateResource.cache
+D:\study\Simon study\大二下\操作系统项目\文件管理_1452675_吴硕旻\filemanagement\filemanagement\obj\Debug\filemanagement.csproj.CoreCompileInputs.cache
+D:\study\Simon study\大二下\操作系统项目\文件管理_1452675_吴硕旻\filemanagement\filemanagement\obj\Debug\filemanagement.exe
+D:\study\Simon study\大二下\操作系统项目\文件管理_1452675_吴硕旻\filemanagement\filemanagement\obj\Debug\filemanagement.pdb

@@ -1,14 +1,8 @@
 local
-a
+
 local
-a1.txt
-asdfsadf
+a
 local
 b
 local
-b1
-local:b1
-b2.txt
-2333333333333333
-local:b1
-b3
+c

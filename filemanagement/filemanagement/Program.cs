@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace filemanagement
+namespace FileManagement
 {
     static class Program
     {
@@ -14,9 +14,11 @@ namespace filemanagement
         [STAThread]
         static void Main()
         {
+            IModel model = new Model();
+            IController controller = new Controller(model);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1(controller));
         }
     }
 }
