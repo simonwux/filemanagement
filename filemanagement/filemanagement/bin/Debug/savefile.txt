@@ -1,0 +1,8 @@
+local
+
+local
+a
+local
+b
+local
+c

@@ -195,7 +195,6 @@ namespace FileManagement
         private void Print(string s)
         {
             this.listBox1.Items.Clear();
-            //Console.WriteLine(s);
             this.listBox1.Items.Add(this.controller.GetCurrentFolderName());
             StringBuilder res = new StringBuilder();
             for (int i = 0; i < s.Length; i++)
@@ -319,22 +318,15 @@ namespace FileManagement
         {
             con = richTextBox1.Text;
             name = textBox2.Text;
-            //create(dir, 1, name, con);
             this.controller.ProcessCommand("createfile " + name + ".txt " + con);
             this.Print(this.controller.ProcessCommand("print"));
-            //print(find(dir));
-            //if (namerepeat) listBox1.Items.Add("文件名与当前目录中文件/文件夹名重复");
         }
         private void button4_Click(object sender, EventArgs e)
         {
             con = "";
             name = textBox2.Text;
-            //Console.WriteLine(name);
             this.controller.ProcessCommand("createdir " + name);
             this.Print(this.controller.ProcessCommand("print"));
-            //create(dir, 0, name, con);
-            //print(find(dir));
-            //if (namerepeat) listBox1.Items.Add("文件夹名与当前目录中文件/文件夹名重复");
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -342,12 +334,6 @@ namespace FileManagement
             dir = textBox1.Text;
             this.controller.ProcessCommand("changedir " + dir);
             this.Print(this.controller.ProcessCommand("print"));
-            //bool f1;
-            //node p = find(dir);
-            //f1 = flag;
-            //if (f1 == false) dir = "local";
-            //print(find(dir));
-            //if (f1 == false) this.listBox1.Items.Add("找不到相应目录，输出根目录");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
