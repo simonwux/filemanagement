@@ -76,64 +76,65 @@ namespace FileManagement
         }
 
 
-        public void Delete(string name, IDirectory folder)
+        public void Delete(string name, IDirectory directory)
         {
+            Console.WriteLine(directory.ToString());
             if (name == null || name.Equals(""))
             {
                 throw new Exception("Name cannot be empty.");
             }
 
-            if (folder == null)
+            if (directory == null)
             {
-                throw new Exception("Folder does not exist.");
+                throw new Exception("Directory does not exist.");
             }
 
             if (name.EndsWith(".txt"))
             {
-                if (folder.GetFile(name) == null)
+                if (directory.GetFile(name) == null)
                 {
                     throw new Exception("The file does not exist.");
                 }
-                this.DeleteFile(name, folder);
+                this.DeleteFile(name, directory);
             }
             else
             {
-                if (folder.GetFolder(name) == null)
+                if (directory.GetFolder(name) == null)
                 {
                     throw new Exception("The file does not exist.");
                 }
-                this.DeleteFolder(name, folder);
+                this.DeleteFolder(name, directory);
 
             }
 
 
         }
 
-        public void DeleteFolder(string folderName, IDirectory folder)
+        public void DeleteFolder(string folderName, IDirectory directory)
         {
-            folder.DeleteFolder(folderName);
+            directory.DeleteFolder(folderName);
         }
 
-        public void DeleteFile(string fileName, IDirectory folder)
+        public void DeleteFile(string fileName, IDirectory directory)
         {
-            folder.DeleteFile(fileName);
+            directory.DeleteFile(fileName);
         }
 
-        public void Write(string fileName, string content, IDirectory folder)
+        public void Write(string fileName, string content, IDirectory directory)
         {
-            if (!folder.GetAllFolder().ContainsKey(fileName)) {
+            if (!directory.GetAllFile().ContainsKey(fileName)) {
                 throw new Exception("File has not been created.");
             }
-            folder.PutFile(fileName, new File(fileName, content));
+            directory.PutFile(fileName, new File(fileName, content));
         }
 
-        public string Print(IDirectory folder)
+        public string Print(IDirectory directory)
         {
             StringBuilder res = new StringBuilder();
-            folder.GetAllFolder()
+            directory.GetAllFolder()
                 .Select(e => "\t" + e.Key + "\n")
                 .Aggregate(res, (a, b) => a.Append(b));
-            folder.GetAllFile()
+            directory.GetAllFile()
                 .Select(e => "\t" + e.Key + "\n")
                 .Aggregate(res, (a, b) => a.Append(b));
             //foreach (var item in folder.GetAllFolder())
@@ -151,7 +152,7 @@ namespace FileManagement
             return res.ToString();
         }
 
-        public string PrintAll(IDirectory folder, int layer)
+        public string PrintAll(IDirectory directory, int layer)
         {
             StringBuilder res = new StringBuilder();
             StringBuilder head = new StringBuilder();
@@ -160,10 +161,10 @@ namespace FileManagement
                 head.Append("\t");
             }
             string headTab = head.ToString();
-            folder.GetAllFolder()
+            directory.GetAllFolder()
                 .Select(e => headTab + e.Key + "\n" + PrintAll(e.Value, layer + 1))
                 .Aggregate(res, (a, b) => a.Append(b));
-            folder.GetAllFile()
+            directory.GetAllFile()
                 .Select(e => headTab + e.Key + "\n")
                 .Aggregate(res, (a, b) => a.Append(b));
 
@@ -189,7 +190,7 @@ namespace FileManagement
             return res.ToString();
         }
 
-        public IDirectory ChangeDir(string[] route, IDirectory folder)
+        public IDirectory ChangeDir(string[] route, IDirectory directory)
         {
             //if (route.Length == 0)
             //{
@@ -199,7 +200,7 @@ namespace FileManagement
             //{
             //    throw new Exception("Wrong route.");
             //}
-            IDirectory tmp = folder;
+            IDirectory tmp = directory;
             //Console.WriteLine("Root " + folder.GetName());
             for (int i = 1; i < route.Length; i++)
             {
@@ -217,13 +218,13 @@ namespace FileManagement
         }
 
 
-        public string Open(string name, IDirectory folder)
+        public string Open(string name, IDirectory directory)
         {
-            if (folder.GetFile(name) == null)
+            if (directory.GetFile(name) == null)
             {
                 return "";
             }
-            return folder.GetFile(name).GetContent();
+            return directory.GetFile(name).GetContent();
         }
 
 

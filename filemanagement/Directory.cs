@@ -11,14 +11,14 @@ namespace FileManagement
 
         private string name;
 
-        private Dictionary<string, IDirectory> folder;
+        private Dictionary<string, IDirectory> directory;
 
         private Dictionary<string, IFile> file;
 
         public Directory(string name)
         {
             this.name = name;
-            this.folder = new Dictionary<string, IDirectory>();
+            this.directory = new Dictionary<string, IDirectory>();
             this.file = new Dictionary<string, IFile>();
         }
 
@@ -29,9 +29,9 @@ namespace FileManagement
 
         public IDirectory GetFolder(string folderName)
         {
-            if (this.folder.ContainsKey(folderName))
+            if (this.directory.ContainsKey(folderName))
             {
-                return this.folder[folderName];
+                return this.directory[folderName];
             }
             return null;
         }
@@ -48,9 +48,9 @@ namespace FileManagement
 
         public void PutFolder(string folderName, IDirectory folder)
         {
-            if (!this.folder.ContainsKey(folderName))
+            if (!this.directory.ContainsKey(folderName))
             {
-                this.folder.Add(folderName, folder);
+                this.directory.Add(folderName, folder);
             }
         }
 
@@ -66,11 +66,11 @@ namespace FileManagement
 
         public void DeleteFolder(string folderName)
         {
-            if (this.folder[folderName] == null)
+            if (this.directory[folderName] == null)
             {
                 throw new Exception("Folder does not exist.");
             }
-            this.folder.Remove(folderName);
+            this.directory.Remove(folderName);
         }
 
         public void DeleteFile(string fileName)
@@ -85,7 +85,7 @@ namespace FileManagement
 
         public Dictionary<string, IDirectory> GetAllFolder()
         {
-            return this.folder;
+            return this.directory;
         }
 
         public Dictionary<string, IFile> GetAllFile()
